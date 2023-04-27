@@ -1,3 +1,20 @@
+import pygame as pg
+pg.init ()
+clock = pg. time. Clock()
+FPS = 10
+WINDOWSIZE =(700,700)
+pg.display.set_mode (WINDOWSIZE)
+
+run = True 
+while run:
+    for event in pg-event. get ():
+        if event. type == pg-QUIT:
+            pg.quit ()
+run = False
+clock.tick(FPS)
+
+
+
 import numpy as np # подключаем библиотеку numpy
 text = open('kargo.txt', encoding='utf8').read() # в переменную отправляем все содержимое файла
 corpus = text.split() # разбиваем текст на отдельные слова
